@@ -1,0 +1,132 @@
+.searchcolumns h3{
+   font-size: 1em;
+   font-weight: bold;
+}
+
+.category-select{
+  margin-top: 1em;
+}
+
+.search-start-price{
+   float: left !important;
+  /*padding-right: 5px !important;*/
+ }
+
+.search-end-price{
+  float: left !important;
+  /*padding-left: 5px !important;*/
+}
+
+.slider.slider-horizontal{
+  width: 100%;
+}
+
+.price-slider{
+  margin-top: 1.4em;
+}
+
+.find-now{
+  margin: 1.5em;
+}
+
+.spinner {
+  width: 70px;
+}
+.spinner input {
+  text-align: right;
+}
+.input-group-btn-vertical {
+  position: relative;
+  white-space: nowrap;
+  width: 1%;
+  vertical-align: middle;
+  display: table-cell;
+}
+.input-group-btn-vertical > .btn {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  padding: 8px;
+  margin-left: -1px;
+  position: relative;
+  border-radius: 0;
+}
+.input-group-btn-vertical > .btn:first-child {
+  border-top-right-radius: 4px;
+}
+.input-group-btn-vertical > .btn:last-child {
+  margin-top: -2px;
+  border-bottom-right-radius: 4px;
+}
+.input-group-btn-vertical i{
+  position: absolute;
+  top: 0;
+  left: 4px;
+}
+
+.num-bids{
+  margin-top: 1em;
+}
+
+.num-bids>label{
+  margin-top: 0.5em;
+}
+
+.num-bids>label, .num-bids>div{
+  float: left;
+}
+
+.numbids-spinner{
+  margin-left: 1em;
+}
+
+footer{
+  padding: 0em 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+
+.searchblock{
+  padding: 0 15px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.products-row{
+  margin-top: 2em;
+}
+
+.breadcrumb {
+  border-radius: 0;
+  margin-bottom: 0.8em;
+  background-color: white;
+  border-left: 2px solid #428bca;
+}
+
+.navbar{
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 0.8em;
+}
+
+#featured-product-carousel{
+  margin-bottom: 2em;
+}
+
+.search-details{
+  margin: 1em 0 !important;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.search-row{
+  margin: 0;
+}
+
+.serch-item{
+  margin: 0 0 2em 0;
+
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auction</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="assets/css/bootstrap-slider.min.css" rel="stylesheet"><!-- http://seiyria.github.io/bootstrap-slider/-->
+    <link href="assets/css/datepicker3.css" rel="stylesheet"><!-- http://bootstrap-datepicker.readthedocs.org/en/release/# -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" role="main">
+<header>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Brand</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Login</a></li>¡
+          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <ol class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li class="active">Search results</li>
+  </ol>
+
+<!-- Search block -->
+  <div class="searchblock">
+    <form role="form">
+      <div class="row searchcolumns">
+        <div class="col-lg-4">
+          <h3>Product</h3>
+          <input type="text" class="form-control" placeholder="Product title">
+          <select class="form-control category-select" placeholder="Category">
+            <option>Category 1</option>
+            <option>Category 2</option>
+          </select>
+        </div>
+        <div class="col-lg-4">
+          <h3>Current price</h3>
+          <div class="price-inputs">
+            <div class="input-group col-lg-6 search-start-price">
+              <span class="input-group-addon">$</span>
+              <input type="text" class="form-control" placeholder="1000" id="start-price-input">
+            </div>
+            <div class="input-group col-lg-6 search-end-price">
+              <span class="input-group-addon">$</span>
+              <input type="text" class="form-control" placeholder="1500" id="end-price-input">
+            </div>
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="price-slider">
+            <input id="price-slider" type="text" class="span2" value="" data-slider-min="900" data-slider-max="1800" data-slider-step="5" data-slider-value="[1000,1500]"/>
+          </div>
+
+        </div>
+        <div class="col-lg-4">
+          <h3>Max auction close date</h3>
+          <div class="input-group">
+            <input type="text" class="form-control" id="max-date" placeholder="dd/mm/yyyy">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+          </div>
+
+          <div class="num-bids">
+            <label for="number-of-bids">Number of Bids</label>
+            <div class="input-group spinner numbids-spinner">
+              <input type="text" id="number-of-bids" class="form-control" value="3" max="999" min="0" maxlength="3">
+              <div class="input-group-btn-vertical">
+                <button class="btn btn-default"><i class="fa fa-caret-up"></i></button>
+                <button class="btn btn-default"><i class="fa fa-caret-down"></i></button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row find-now">
+        <div class="col-sm-12">
+          <button class="btn btn-primary btn-lg center-block">Find now</button>
+        </div>
+      </div>
+    </form>
+  </div>
+<!-- End search block -->
+
+<!-- Products block -->
+<div class="row products-row" id="search-products"></div>
+<!-- End products block -->
+
+<!-- Templates block -->
+<script id="search-products-template" type="text/x-jsrender">
+
+    <ul class="list-unstyled">
+      {{props items}}
+        <li class="col-sm-4">
+        <div class="col-md-4">
+          <a href="{{>prop.url}}"><img src="{{>prop.thumb}}" alt="" class="img-responsive"></a>
+        </div>
+
+        <div class="col-md-8">
+          <h2><a href="{{>prop.url}}">{{>prop.title}}</a></h2>
+
+          <p>
+            <b>Item's description:</b>
+            {{>prop.description}}
+          </p>
+        </div>
+      </li>
+      {{/props}}
+
+    </ul>
+</script>
+
+<!-- End templates block -->
+
+<footer class="text-center">
+  <br/>
+  <a href="javascript:void(0)">Home</a> |
+  <a href="javascript:void(0)">Search</a> |
+  <a href="javascript:void(0)">About Us</a> |
+  <a href="javascript:void(0)">Terms of Service</a>
+  <br/><br/>
+</footer>
+</div>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-slider.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jsrender.js"></script> <!-- http://www.jsviews.com/#jsrender -->
+<script src="js/script.js"></script>
+</body>
+</html>
